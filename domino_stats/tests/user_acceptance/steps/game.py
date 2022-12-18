@@ -14,7 +14,7 @@ def package_exists(context):
     """
     try:
         import domino_stats
-    except ImportError as e:
+    except ImportError:
         print("Package domino_stats not installed")
 
 
@@ -25,8 +25,8 @@ def create_game_with_type(context):
     ----------
     context : behave.runner.Context
     """
-    type = "Double 15"
-    context.game = domino_stats.game.Game(type=type)
+    game_type = "Double 15"
+    context.game = domino_stats.game.Game(type=game_type)
 
 
 @then("a game will be instantiated with 16 zero-indexed rounds")
