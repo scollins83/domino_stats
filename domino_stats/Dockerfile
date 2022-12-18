@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-COPY poetry.lock pyproject.toml ./
+#COPY poetry.lock pyproject.toml ./
 RUN pip install --upgrade pip && \
     pip install poetry && \
     poetry config virtualenvs.create false 
